@@ -15,6 +15,9 @@ class LoginScreenState extends State<LoginScreen>{
 
   FirebaseAuth auth =FirebaseAuth.instance;
 
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -26,6 +29,7 @@ class LoginScreenState extends State<LoginScreen>{
             children: <Widget>[
               Image.asset("resources/Koala.jpg", height: 200,),
               TextFormField(
+                controller: email,
                 decoration: InputDecoration(labelText: "Email"),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value){
@@ -33,6 +37,7 @@ class LoginScreenState extends State<LoginScreen>{
                 },
               ),
               TextFormField(
+                controller: password,
                 decoration: InputDecoration(labelText: "Password"),
                 obscureText: true,
                 validator: (value){
@@ -47,8 +52,8 @@ class LoginScreenState extends State<LoginScreen>{
                       child: Text("Sign in"),
                         onPressed: (){
                           auth.signInWithEmailAndPassword(
-                            email: "x@x.com",
-                            password: "12345678",
+                            email: email.text,
+                            password: password.text,
                           ).then((FirebaseUser user) {
                             if (user.isEmailVerified){
                               print("Go to home screen");
