@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyCustomForm extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MyCustomFormState();
   }
 
@@ -15,7 +14,6 @@ class MyCustomFormState extends State<MyCustomForm>{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("Custom form"),

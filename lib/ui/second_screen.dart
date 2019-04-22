@@ -30,7 +30,6 @@ Future<int> readCounter() async{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("Second Screen"),

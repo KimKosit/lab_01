@@ -9,7 +9,6 @@ import 'package:image_picker/image_picker.dart';
 class FirstScreen extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return FirstScreenState();
   }
   
@@ -29,7 +28,6 @@ class FirstScreenState extends State<FirstScreen>{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       floatingActionButton: new FloatingActionButton(
         onPressed: getImage,

@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:lab_01/model/todo.dart';
 
-class TodoScreen extends StatelessWidget{
+class TodoScreen extends StatefulWidget{
+  @override
+  TodoScreenState createState() {
+    return new TodoScreenState();
+  }
+}
+
+class TodoScreenState extends State<TodoScreen> {
   TodoProvider todo =TodoProvider();
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("Todo Screen"),
@@ -71,5 +78,4 @@ class TodoScreen extends StatelessWidget{
       ),
     );
   }
-
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab_01/ui/register_screen.dart';
-import './ui/list_book.dart';
+import './ui/map_screen.dart';
 // import './ui/login_screen.dart';
 // import './ui/book_screen.dart';
 // import 'package:lab_01/ui/todo_screen.dart';
@@ -8,6 +7,8 @@ import './ui/list_book.dart';
 // import './ui/second_screen.dart';
 // import './ui/my_custom_form.dart';
 // import './ui/list_data.dart';
+// import 'package:lab_01/ui/register_screen.dart';
+// import './ui/list_book.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,8 +33,7 @@ class MyApp extends StatelessWidget {
       // home: MyHomePage(),
       initialRoute: "/",
       routes:{
-        "/" : (context) => ListBook(),
-        "/register": (context) => RegisterScreen(),
+        "/" : (context) => MapScreen(),
       }
     );
   }
@@ -42,7 +42,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return DefaultTabController(
       length: 3,
       child: Scaffold(

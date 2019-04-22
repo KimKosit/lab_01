@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 class LoginScreen extends StatefulWidget{
   @override
   State<LoginScreen> createState() {
-    // TODO: implement createState
     return LoginScreenState();
   }
 
@@ -20,7 +19,6 @@ class LoginScreenState extends State<LoginScreen>{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: Padding(padding: EdgeInsets.all(18),
         child: Form(
